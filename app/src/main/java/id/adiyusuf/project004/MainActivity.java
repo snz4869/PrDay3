@@ -52,19 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        //init
-        btn_ig = findViewById(R.id.btn_ig);
-
-        btn_ig.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myImplicitIntent = new Intent(Intent.ACTION_VIEW);
-                myImplicitIntent.setData(Uri
-                        .parse("https://www.inixindo.id/")); // Inplicit intent --> source dan destination
-                startActivity(myImplicitIntent);
-            }
-
-        });
         Fragment fragment = null;
         switch (item.getItemId()) {
             case R.id.menu_home:
@@ -140,6 +127,24 @@ public class MainActivity extends AppCompatActivity {
                         break;
                 }
                 return true;
+            }
+        });
+
+        NavigationView navigationView = findViewById(R.id.navView);
+        View headerView = getLayoutInflater().inflate(R.layout.nav_header_layout,
+                navigationView, false);
+        navigationView.addHeaderView(headerView);
+
+        Button btn_instagram = headerView.findViewById(R.id.btn_wa);
+        btn_instagram.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Toast.makeText(getApplicationContext(), "Test Header Click", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://wa.me/6283879438051"));
+                startActivity(intent);
             }
         });
     }

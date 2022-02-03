@@ -36,14 +36,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="start"
+            android:paddingVertical="0dp"
+            app:menu="@menu/navigation_item"
             android:background="@color/white"
             android:fitsSystemWindows="true"
-            app:headerLayout="@layout/nav_header_layout"
             app:itemBackground="@drawable/item_selected"
             app:itemHorizontalPadding="42dp"
             app:itemIconPadding="32dp"
             app:itemIconSize="20dp"
-            app:menu="@menu/navigation_item" />
+            app:itemTextAppearance="?android:attr/textAppearanceSmallInverse"
+            />
 
     </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

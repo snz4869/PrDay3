@@ -47,11 +47,12 @@
                     android:textStyle="normal" />
 
                 <Button
-                    android:id="@+id/btn_ig"
+                    android:id="@+id/btn_wa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
-                    android:text="Instagram"
+                    android:text="WA:083879438051"
+                    android:textSize="12sp"
                     android:textStyle="bold" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
