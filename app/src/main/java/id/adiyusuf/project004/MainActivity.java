@@ -135,8 +135,8 @@ public class MainActivity extends AppCompatActivity {
                 navigationView, false);
         navigationView.addHeaderView(headerView);
 
-        Button btn_instagram = headerView.findViewById(R.id.btn_wa);
-        btn_instagram.setOnClickListener(new View.OnClickListener()
+        Button btn_wa = headerView.findViewById(R.id.btn_wa);
+        btn_wa.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
